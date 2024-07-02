@@ -1,0 +1,42 @@
+diff --git a/_Makefile b/Makefile
+--- a/_Makefile
++++ b/Makefile
+@@ -57,11 +57,11 @@ CONFIGURE_ARGS += \
+ 	--enable-shared \
+ 	--enable-static \
+ 	--disable-thread \
+-	--enable-cookies \
+-	--enable-crypto-auth \
+-	--enable-nonblocking \
+-	--enable-file \
+-	--enable-ftp \
++	--disable-cookies \
++	--disable-crypto-auth \
++	--disable-nonblocking \
++	--disable-file \
++	--disable-ftp \
+ 	--enable-http \
+ 	--disable-ares \
+ 	--disable-debug \
+@@ -71,17 +71,17 @@ CONFIGURE_ARGS += \
+ 	--disable-manual \
+ 	--disable-sspi \
+ 	--disable-telnet \
+-	--enable-tftp \
++	--disable-tftp \
+ 	--disable-verbose \
+-	--with-random="/dev/urandom" \
+-	--with-ssl="$(STAGING_DIR)/usr" \
++	--without-random \
++	--without-ssl \
+ 	--without-ca-bundle \
+ 	--without-gnutls \
+ 	--without-krb4 \
+ 	--without-libidn \
+ 	--without-nss \
+ 	--without-libssh2 \
+-	--with-zlib="$(STAGING_DIR)/usr" \
++	--without-zlib \
+ 	$(call autoconf_bool,CONFIG_IPV6,ipv6) \
+ 
+ CONFIGURE_VARS += \
